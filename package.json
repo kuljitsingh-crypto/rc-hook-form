@@ -1,5 +1,5 @@
 {
-  "name": "lib-template",
+  "name": "rc-hook-form",
   "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -24,6 +24,7 @@
     "@rollup/plugin-typescript": "^11.1.6",
     "@svgr/rollup": "^8.1.0",
     "@types/jest": "^29.5.13",
+    "@types/lodash": "^4.17.16",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
     "css-loader": "^7.1.2",
@@ -45,5 +46,8 @@
   "scripts": {
     "dev-start": "rollup -c rollup.dev.config.js -w --bundleConfigAsCjs",
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
