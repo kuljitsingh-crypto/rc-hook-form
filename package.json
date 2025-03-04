@@ -1,5 +1,5 @@
 {
-  "name": "rc-hook-form",
+  "name": "rc-simple-hook-form",
   "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -49,5 +49,12 @@
   },
   "dependencies": {
     "lodash": "^4.17.21"
-  }
+  },
+  "keywords": [
+    "rc",
+    "form",
+    "react",
+    "react-form",
+    "hook-form"
+  ]
 }

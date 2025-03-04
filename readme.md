@@ -7,11 +7,11 @@
 ## Installation
 
 ```bash
-npm install rc-hook-form 
+npm install rc-simple-hook-form
 ```
 or 
 ```sh
-yarn add rc-hook-form
+yarn add rc-simple-hook-form
 ```
 
 ## `Controller` Component
