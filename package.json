@@ -48,7 +48,8 @@
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "rc-simple-hook-form": "^1.0.0"
   },
   "keywords": [
     "rc",

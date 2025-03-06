@@ -1,5 +1,5 @@
 import React from "react";
-import { useForm, Controller } from "../../src";
+import { useForm, Controller } from "rc-simple-hook-form";
 
 function Test() {
   const { register, control, formState, setField, resetForm } = useForm({
