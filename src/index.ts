@@ -9,7 +9,7 @@ import {
 
 export const useForm = useFormHook;
 export const Controller = FormController;
-export type InputType = Input;
+export type UseFormInputType = Input;
 export type UseFormControl = ReturnType<typeof useFormHook>["control"];
 export type UseFormController = Parameters<typeof FormController>[0];
 export type UseFormValidationField = ValFields;
