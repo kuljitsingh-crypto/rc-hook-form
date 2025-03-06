@@ -19,7 +19,7 @@ type RenderProp = {
     isDirty: boolean;
     invalid: boolean;
     isActive: boolean;
-    error: string;
+    error: string[];
   };
 };
 type ControllerProps = {

@@ -59,7 +59,7 @@ export type RegisterExtraProps = ValidationFields &
 export type InputType = (typeof validInputType)[number];
 
 export type FormState = {
-  error: Record<string, string>;
+  error: Record<string, string[]>;
   active: Record<string, boolean>;
   touched: Record<string, boolean>;
   pristine: Record<string, boolean>;
