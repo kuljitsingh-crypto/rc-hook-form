@@ -30,7 +30,7 @@ type ControllerProps = {
   rules?: ValidationFields;
   disabled?: boolean;
   runValidationWhenChangesIn?: string[];
-  ref?: React.MutableRefObject<EventElement | null>;
+  controllerRef?: React.MutableRefObject<EventElement | null>;
   radioFieldValue?: string;
   checkboxFieldValue?: string;
   render: (arg: RenderProp) => React.JSX.Element;
@@ -38,7 +38,7 @@ type ControllerProps = {
 
 function Controller(props: ControllerProps) {
   const {
-    ref,
+    controllerRef,
     name,
     type,
     rules,
@@ -62,7 +62,7 @@ function Controller(props: ControllerProps) {
     ref: forwardedRef,
     disabled: inputDisabled,
   } = register(name, type, {
-    ref,
+    ref: controllerRef,
     disabled,
     radioFieldValue,
     checkboxFieldValue,

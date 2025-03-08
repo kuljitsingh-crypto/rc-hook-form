@@ -14,7 +14,6 @@ function Test() {
       {" "}
       <input
         {...register("testing", "text", {
-          ref: inputRef,
           required: true,
           validEmail: true,
           minLength: { value: 8 },
@@ -49,6 +48,7 @@ function Test() {
         control={control}
         rules={{ required: true }}
         initialValue={"fdsjfkdshk"}
+        controllerRef={inputRef}
         render={(renderProps) => {
           const { field } = renderProps;
           return <input {...field} />;
