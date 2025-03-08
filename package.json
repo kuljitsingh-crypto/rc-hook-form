@@ -8,6 +8,7 @@
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
+  "homepage": "https://github.com/kuljitsingh-crypto/rc-hook-form",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.25.6",
@@ -48,8 +49,7 @@
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs"
   },
   "dependencies": {
-    "lodash": "^4.17.21",
-    "rc-simple-hook-form": "^1.0.0"
+    "lodash": "^4.17.21"
   },
   "keywords": [
     "rc",
@@ -57,5 +57,6 @@
     "react",
     "react-form",
     "hook-form"
-  ]
+  ],
+  "repository": {"type": "github","url": "https://github.com/kuljitsingh-crypto/rc-hook-form"}
 }
