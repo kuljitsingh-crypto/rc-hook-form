@@ -327,7 +327,7 @@ export const useForm = <T extends Record<string, any>>(
       };
       const refCallback = (e: null | EventElement) => {
         elementRef.current[name as string] = e;
-        if (ref && ref.current) {
+        if (ref && typeof ref.current !== "undefined") {
           ref.current = e;
         }
         if (e && !isPristineInitialized.current[name as string]) {

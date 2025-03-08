@@ -1,17 +1,20 @@
-import React from "react";
-import { useForm, Controller } from "rc-simple-hook-form";
+import React, { useRef } from "react";
+// import { useForm, Controller } from "rc-simple-hook-form";
+import { useForm, Controller } from "../../src";
 
 function Test() {
   const { register, control, formState, setField, resetForm } = useForm({
     initialState: { size: ["x"], testing: "", abc: "1" },
   });
-  console.log(formState);
+  const inputRef = useRef(null);
+  console.log(formState, inputRef);
 
   return (
     <div>
       {" "}
       <input
         {...register("testing", "text", {
+          ref: inputRef,
           required: true,
           validEmail: true,
           minLength: { value: 8 },
