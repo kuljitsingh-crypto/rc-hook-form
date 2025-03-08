@@ -30,7 +30,7 @@ type ControllerProps = {
   rules?: ValidationFields;
   disabled?: boolean;
   runValidationWhenChangesIn?: string[];
-  ref?: React.MutableRefObject<EventElement>;
+  ref?: React.MutableRefObject<EventElement | null>;
   radioFieldValue?: string;
   checkboxFieldValue?: string;
   render: (arg: RenderProp) => React.JSX.Element;
