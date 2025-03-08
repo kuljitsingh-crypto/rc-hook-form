@@ -1,6 +1,6 @@
 {
   "name": "rc-simple-hook-form",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -58,5 +58,8 @@
     "react-form",
     "hook-form"
   ],
-  "repository": {"type": "github","url": "https://github.com/kuljitsingh-crypto/rc-hook-form"}
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/kuljitsingh-crypto/rc-hook-form"
+  }
 }
