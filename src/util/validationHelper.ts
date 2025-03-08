@@ -17,14 +17,14 @@ export const validationCallback: Record<
       `Field must have at least ${refValue} characters.`,
       msg
     );
-    return value.length >= refValue ? VALID : errorMsg;
+    return value?.length >= refValue ? VALID : errorMsg;
   },
   maxLength: (value, msg, refValue) => {
     const errorMsg = getErrorMsg(
       `Field must have no more than ${refValue} characters.`,
       msg
     );
-    return value.length <= refValue ? VALID : errorMsg;
+    return value?.length <= refValue ? VALID : errorMsg;
   },
   min: (value, msg, refValue) => {
     const errorMsg = getErrorMsg(`Field must be more than ${refValue}.`, msg);
