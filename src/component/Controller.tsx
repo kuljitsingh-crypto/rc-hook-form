@@ -19,6 +19,7 @@ type RenderProp = {
     isDirty: boolean;
     invalid: boolean;
     isActive: boolean;
+    isEmpty: boolean;
     error: string[];
   };
 };
@@ -89,6 +90,7 @@ function Controller(props: ControllerProps) {
     isDirty: !fieldPristine[name],
     invalid: !!errors[name],
     isActive: !!active[name],
+    isEmpty: !value,
     error: errors[name] ?? [],
   };
 

@@ -506,6 +506,10 @@ export const useForm = <T extends Record<string, any>>(
     () => isObjEmpty(formState.error),
     [formState.error]
   );
+  const isEmpty = useMemo(
+    () => isObjEmpty(formState.values),
+    [formState.values]
+  );
 
   const formReturn = {
     formState: {
@@ -514,6 +518,7 @@ export const useForm = <T extends Record<string, any>>(
       touched: formState.touched,
       errors: formState.error,
       invalid: !formValid,
+      isEmpty,
       fieldPristine: formState.pristine,
       formPristine,
     },
