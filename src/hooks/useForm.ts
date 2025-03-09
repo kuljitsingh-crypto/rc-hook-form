@@ -469,7 +469,7 @@ export const useForm = <T extends Record<string, any>>(
       e.preventDefault();
       const hasAnyError = !isObjEmpty(formState.error);
       if (hasAnyError) return;
-      const hasValues = isObjEmpty(formState.values);
+      const hasValues = !isObjEmpty(formState.values);
       if (!hasValues) return;
       setFormPristine(true);
       updateFormState("pristine", initializeFieldState("pristine", true));

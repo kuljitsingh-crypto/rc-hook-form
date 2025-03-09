@@ -4,9 +4,7 @@ import { useForm, Controller } from "../../src";
 
 function Test() {
   const { register, control, formState, setField, resetForm, handleSubmit } =
-    useForm({
-      initialState: { size: ["x"], testing: "", abc: "1" },
-    });
+    useForm();
   const inputRef = useRef(null);
   console.log(formState, inputRef);
   const formSubmit = (data) => {
@@ -47,7 +45,7 @@ function Test() {
           <option value='4'>4</option>
           <option value='5'>5</option>
         </select>
-        <Controller
+        {/* <Controller
           name='controller'
           type='text'
           control={control}
@@ -58,14 +56,8 @@ function Test() {
             const { field } = renderProps;
             return <input {...field} />;
           }}
-        />
-        <button
-          type='button'
-          onClick={() => {
-            resetForm();
-          }}>
-          reset Form
-        </button>
+        /> */}
+        <button type='submit'>submit</button>
       </form>
     </div>
   );
