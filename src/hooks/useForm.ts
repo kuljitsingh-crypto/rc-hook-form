@@ -1,4 +1,4 @@
-import {
+import React, {
   ChangeEvent,
   useCallback,
   useEffect,
@@ -464,7 +464,8 @@ export const useForm = <T extends Record<string, any>>(
   };
 
   const handleSubmit =
-    (submitCallback: (arg: T) => void) => (e: SubmitEvent) => {
+    (submitCallback: (arg: T) => void) =>
+    (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       if (isObjEmpty(formState.error)) {
         setFormPristine(true);
