@@ -467,11 +467,13 @@ export const useForm = <T extends Record<string, any>>(
     (submitCallback: (arg: T) => void) =>
     (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      if (isObjEmpty(formState.error)) {
-        setFormPristine(true);
-        updateFormState("pristine", initializeFieldState("pristine", true));
-        submitCallback(formState.values as T);
-      }
+      const hasAnyError = !isObjEmpty(formState.error);
+      if (hasAnyError) return;
+      const hasValues = isObjEmpty(formState.values);
+      if (!hasValues) return;
+      setFormPristine(true);
+      updateFormState("pristine", initializeFieldState("pristine", true));
+      submitCallback(formState.values as T);
     };
 
   const useInitializeFormState = (initialState: T, deps: any[]) => {
