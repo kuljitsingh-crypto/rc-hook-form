@@ -100,7 +100,7 @@ function Controller(props: ControllerProps) {
     }
   }, []);
 
-  return <div>{render({ field, fieldState })}</div>;
+  return <React.Fragment>{render({ field, fieldState })}</React.Fragment>;
 }
 
 export default Controller;
